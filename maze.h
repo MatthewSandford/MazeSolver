@@ -18,7 +18,6 @@ public:
 
 	Maze() : start(), end(), maze_w(), maze_h(), maze_vector() {};
 	Maze(std::string file) : start(), end(), maze_w(), maze_h(), maze_vector() { load_maze(file); };
-	Maze(std::vector<std::vector<int>> input_maze) : start(), end(), maze_w(), maze_h(), maze_vector() { load_maze(input_maze); };
 	Maze(const Maze& input_maze) : start(input_maze.start), end(input_maze.end), maze_w(input_maze.maze_w), maze_h(input_maze.maze_h), maze_vector(input_maze.maze_vector) {};
 	~Maze() {};
 

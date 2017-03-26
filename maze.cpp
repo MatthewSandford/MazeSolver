@@ -61,9 +61,9 @@ std::ostream& operator << (std::ostream& out, Maze& maze_object)
 			case 2:
 				out << 'X';
 				break;
-			default:
+			case 3:
 				out << '-';
-				break;
+			break;
 			}
 		}
 		out << std::endl;

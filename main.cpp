@@ -10,7 +10,11 @@ int main(int argc, char** argv)
 	{
 		Maze_solver solver;
 		solver.maze.load_maze(argv[1]);
-		std::cout << solver.maze << std::endl;
-		solver.solve();
+		solver.solve(1);
+	}
+
+	while (1)
+	{
+
 	}
 }

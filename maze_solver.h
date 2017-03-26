@@ -5,6 +5,8 @@
 #include <algorithm>
 
 #include "maze.h"
+#include "maze_node.h"
+#include "maze_structure.h"
 
 class Maze_solver
 {
@@ -21,7 +23,10 @@ protected:
 
 private:
 
-	double euclidean_distance(Vector2<int> p1, Vector2<int> p2);
-	int recersive_step(Vector2<int> location);
-	std::vector<std::tuple<Vector2<int>, double>> available_moves(Vector2<int> position);
+	Maze_structure* recersive_step(Maze_structure* maze_ptr);
+	Maze_structure* A_recersive_step(Maze_structure* maze_ptr);
+	std::vector<Maze_node*> available_moves(Maze_node* node_ptr);
+
+	void find_path(Maze_structure* maze_ptr);
+	double euclidean_distance(const Vector2<int> p1, const Vector2<int> p2);
 };
