@@ -1,5 +1,6 @@
 #include  "maze.h"
 
+//Load maze from input file
 void Maze::load_maze(std::string file)
 {
 	std::ifstream openFile(file.c_str());
@@ -21,15 +22,15 @@ void Maze::load_maze(std::string file)
 			//Check for a start or end character
 			if (char_int == 2)
 			{
-				if (start.x == NULL)
-				{
-					start.x = column;
-					start.y = row;
-				}
-				else
+				if (end.x == NULL)
 				{
 					end.x = column;
 					end.y = row;
+				}
+				else
+				{
+					start.x = column;
+					start.y = row;
 				}
 			}
 		}
@@ -41,14 +42,7 @@ void Maze::load_maze(std::string file)
 	maze_h = maze_vector.size();
 }
 
-void Maze::load_maze(std::vector<std::vector<int>> input_maze)
-{
-	maze_vector = input_maze;
-
-	maze_w = input_maze[0].size();
-	maze_h = input_maze.size();
-}
-
+//Overloaded operator to print out maze object
 std::ostream& operator << (std::ostream& out, Maze& maze_object)
 {
 	//Loop through maze and print
@@ -78,6 +72,7 @@ std::ostream& operator << (std::ostream& out, Maze& maze_object)
 	return out;
 }
 
+//Print maze information
 void Maze::print_maze_info()
 {
 	std::cout << "Start: " << start.x << " " << start.y << std::endl;

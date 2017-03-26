@@ -25,9 +25,6 @@ public:
 	//Load from file
 	void load_maze(std::string file);
 
-	//Load input vector
-	void load_maze(std::vector<std::vector<int>> input_maze);
-
 	//Accessors
 	int get_width() { return maze_w; }
 	int get_height() { return maze_h; }

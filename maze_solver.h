@@ -1,6 +1,8 @@
 #pragma once
 
+#include <math.h> 
 #include <windows.h>
+#include <algorithm>
 
 #include "maze.h"
 
@@ -19,6 +21,7 @@ protected:
 
 private:
 
+	double euclidean_distance(Vector2<int> p1, Vector2<int> p2);
 	int recersive_step(Vector2<int> location);
-	std::vector<Vector2<int>> available_moves(Vector2<int> position);
+	std::vector<std::tuple<Vector2<int>, double>> available_moves(Vector2<int> position);
 };

@@ -13,9 +13,4 @@ int main(int argc, char** argv)
 		std::cout << solver.maze << std::endl;
 		solver.solve();
 	}
-
-	while (1)
-	{
-
-	}
 }
