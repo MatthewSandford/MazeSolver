@@ -8,5 +8,5 @@ int main(int argc, char** argv)
 	solver.maze.load_maze(argv[1]);
 	solver.solve(1);
 
-	while (1) {};
+	system("PAUSE");
 }
