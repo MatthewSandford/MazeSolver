@@ -12,3 +12,9 @@ void Maze_node::set_position(Vector2<int> new_position)
 	assert(("Maze node distance set lower than 0", test));
 	position = new_position;
 }
+
+std::ostream & operator<<(std::ostream & out, Maze_node & node)
+{
+	out << "Position: " << node.position << "Distance: " << node.distance << "Children: " << node.children.size() << std::endl;
+	return out;
+}

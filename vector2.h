@@ -14,7 +14,7 @@ public:
 	bool operator == (const Vector2<T>& other) const;
 	bool operator != (const Vector2<T>& other) const;
 
-	friend std::ostream& operator << (std::ostream& out, Vector2& vector)
+	friend std::ostream& operator << (std::ostream& out, Vector2<int>& vector)
 	{
 		out << "(" << vector.x << "," << vector.y << ")" << std::endl;
 		return out;

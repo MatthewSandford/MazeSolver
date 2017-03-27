@@ -39,6 +39,9 @@ void Maze_solver::solve(int solve_type)
 	
 	find_path(maze_ptr);
 
+	//Clean up structure
+	delete maze_ptr;
+
 	std::clock_t end_time(std::clock());
 
 	std::cout << maze_solution << std::endl;

@@ -23,11 +23,7 @@ public:
 	Vector2<int> get_position() const { return position; };
 
 	//Outout stream
-	friend std::ostream& operator << (std::ostream& out, Maze_node& node)
-	{
-		out << "Position: " << node.position << "Distance: " << node.distance << "Children: " << node.children.size() << std::endl;
-		return out;
-	}
+	friend std::ostream& operator << (std::ostream& out, Maze_node& node);
 
 	Maze_node* parent;
 	std::vector<Maze_node*> children;

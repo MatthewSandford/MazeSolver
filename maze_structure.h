@@ -6,8 +6,8 @@ class Maze_structure
 {
 public:
 
-	Maze_structure() {};
-	~Maze_structure() {};
+	Maze_structure() : root(), end(), leaf_nodes() {};
+	~Maze_structure() { delete_structure(root); };
 
 	Maze_node* root;
 	Maze_node* end;
@@ -16,5 +16,8 @@ public:
 protected:
 
 private:
+
+	//Clean up structure
+	void delete_structure(Maze_node* node_ptr);
 
 };
